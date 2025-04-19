@@ -8,7 +8,8 @@ display_menu() {
     echo "3. Windows Server 2022"
     echo "4. Windows 10"
     echo "5. Windows 11"
-    echo "6. Windows 1021h2"
+    echo "6. Windows 10 21H2"
+    echo "7. Windows Server 2025"  # New option added here
     read -p "Enter your choice: " choice
 }
 
@@ -31,38 +32,44 @@ case $choice in
     1)
         # Windows Server 2016
         img_file="windows2016.img"
-        iso_link="https://go.microsoft.com/fwlink/p/?LinkID=2195174&clcid=0x409&culture=en-us&country=US"
+        iso_link="https://software-static.download.prss.microsoft.com/dbazure/983ab6f7-e3d2-45e6-bc2a-d438b7817626/server/SERVER_EVAL_x64FRE_en-us.iso"
         iso_file="windows2016.iso"
         ;;
     2)
         # Windows Server 2019
         img_file="windows2019.img"
-        iso_link="https://go.microsoft.com/fwlink/p/?LinkID=2195167&clcid=0x409&culture=en-us&country=US"
+        iso_link="https://software-static.download.prss.microsoft.com/dbazure/983ab6f7-e3d2-45e6-bc2a-d438b7817626/server/SERVER_EVAL_x64FRE_en-us_17763.iso"
         iso_file="windows2019.iso"
         ;;
     3)
         # Windows Server 2022
         img_file="windows2022.img"
-        iso_link="https://go.microsoft.com/fwlink/p/?LinkID=2195280&clcid=0x409&culture=en-us&country=US"
+        iso_link="https://software-static.download.prss.microsoft.com/dbazure/983ab6f7-e3d2-45e6-bc2a-d438b7817626/server/SERVER_EVAL_x64FRE_en-us_20348.iso"
         iso_file="windows2022.iso"
         ;;
     4)
         # Windows 10
         img_file="windows10.img"
-        iso_link="http://134.199.163.87/WIN10.iso"
+        iso_link="https://software-download.microsoft.com/download/pr/19044.1288.211006-0501.21h2_release_svc_refresh_CLIENT_EVAL_x64FRE_en-us.iso"
         iso_file="windows10.iso"
         ;;
     5)
         # Windows 11
         img_file="windows11.img"
-        iso_link="http://134.199.163.87/WIN11.iso"
+        iso_link="https://software-download.microsoft.com/download/pr/22621.1.220506-1250.NI_RELEASE_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_EN-US.ISO"
         iso_file="windows11.iso"
         ;;
     6)
-        # Windows 1021h2
+        # Windows 10 21H2
         img_file="windows1021h2.img"
-        iso_link="http://134.199.163.87/win1021H2.img"
+        iso_link="https://software-download.microsoft.com/download/pr/19044.1288.211006-0501.21h2_release_svc_refresh_CLIENT_EVAL_x64FRE_en-us.iso"
         iso_file="windows1021h2.iso"
+        ;;
+    7)
+        # Windows Server 2025 (New option added here)
+        img_file="windows2025.img"
+        iso_link="https://software-static.download.prss.microsoft.com/sg/download/888969d5-f34g-4e03-ac9d-1f9786c66749/SERVER_EVAL_x64FRE_en-us.iso"  # Replace XXXXXX with the actual LinkID
+        iso_file="windows2025.iso"
         ;;
     *)
         echo "Invalid choice. Exiting."
